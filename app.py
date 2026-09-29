@@ -73,7 +73,7 @@ if not df.empty:
         breakouts = df[df["Breakout"] != "-"]
         st.metric("Breakouts found", len(breakouts))
         st.dataframe(
-            breakouts.style.applymap(_color_breakout, subset=["Breakout"]),
+            breakouts.style.map(_color_breakout, subset=["Breakout"]),
             use_container_width=True,
         )
 
